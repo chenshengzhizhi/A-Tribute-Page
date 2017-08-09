@@ -1,104 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <style>
-  h1{
-    font-size:60px;
-  }
-  .gray-background {
-    background-color:#E0E0E0;
-  }
-  .box-BigTitle{
-    text-align: center;
-    background-color: green;
-    padding-top:30px;
-    padding-bottom:10px;
-  }
-  .box-SmallTitle{
-    text-align: center;
-    background-color: yellow;
-    padding-bottom:10px;
-  }
-  .box-img{
-    text-align: center;
-    background-color: red;
-    padding: 5px 5px 5px 5px;
-  }
-  .box-ImgComment{
-    text-align: center;
-    background-color: white;
-    padding: 5px 5px 5px 5px;
-  }
-  .box-TimeLineTitle{
-    background-color: orange;
-    padding: 10px 5px 1px 100px;
-  }
-  .box-TimeLine{
-    background-color: pink;
-    padding-left: 100px;
-    padding-bottom: 5px;
-    font-size: 15px; 
-  }
-  .img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  .signature{
-    font-size: 15px;
-    background-color: white;
-    color:gray;
-    padding-left: 100px;
-    padding-bottom: 5px;
-  }
-  .readmore{
-    background-color: gray;
-    padding-left: 100px;
-    padding-bottom: 5px;
-  }
+    body{
+        margin:auto;
+    }
+    .intro{
+        background-color: gray;
+        margin:-10px;
+    }
+
+    .intro-box{
+        background-color:pink;
+        max-width:60%;
+        margin:auto;
+        padding:100px 10px 10px 10px;
+        overflow:hidden;
+    }
+
+    .intro-box1{
+        background-color:pink;
+        float:left;
+        max-width:70%;
+    }
+
+    .intro-box2{
+        background-color:pink;
+        float:right;
+        max-width:30%;
+        padding-top:10px;
+    }
+
+    .intro-para{
+        font-size:20px;
+        text-indent:32px;
+    }
+
+    .intro-lablist{
+        margin-top:50px;
+        padding:0;
+        overflow:hidden;
+    }
+
+    .intro-lab{
+        background-color:purple;
+        height:30px;
+        line-height:30px;
+        margin:0px 5px 0px 5px;
+        padding:0px 5px 0px 5px;
+        float:left;
+        list-style-type:none;
+        text-align: center;
+        font-size:16px;
+        color:white;
+        border-radius:5px;
+    }
+
+    .intro-img{
+        border-radius:30%;
+        max-width:80%;
+        height:auto;
+        display: block;
+        margin: auto;
+    }
+
+    .temp-box{
+        background-color:purple;
+        max-width:60%;
+        margin:auto;
+        padding:30px 10px 0px 10px;
+        overflow:hidden;
+    }
+
+    .temp{
+        background-color:white;
+        height:auto;
+        max-width:30%;
+        margin:12px;
+        padding:5px;
+        border-radius:10px;
+        float:left;
+    }
+
+    .temp-img{
+        border-radius:10px;
+        max-width:100%;
+        height:auto;
+        display: block;
+        margin: auto;
+    }
+
+
+
+    .headline {
+        background-color: yellow;
+        max-height:200px;
+        width:100%;
+        position:fixed;
+        padding-top:20px;
+        padding-bottom:20px;
+        margin:auto;
+    }
+
+    .headline-box{
+        height:50px;
+        max-width:60%;
+        margin:auto;
+        padding:0px;
+    }
+
+    .headline-box1{
+        background-color:red;
+        height:50px;
+        line-height:50px;
+        margin:0px;
+        float:left;
+    }
+
+    .headline-box2{
+        background-color: blue;
+        height:50px;
+        line-height:50px;
+        width:auto;
+        margin:0px;
+        float:right;
+    }
+
+    .headline-btnlist{
+        margin:0;
+        padding:0;
+        overflow:hidden;
+    }
+
+    .headline-btn{
+        height:50px;
+        line-height:50px;
+        width:120px;
+        margin:0px;
+        float:right;
+        list-style-type:none;
+        text-align: center;
+        font-size:20px;
+    }
+
+    .contact-box{
+        background-color:gray;
+        max-width:60%;
+        margin:auto;
+        padding:10px 10px 10px 10px;
+        overflow:hidden;
+    }
+
+    .contact-box1{
+        float:left;
+        max-width:50%;
+    }
+
+    .contact-box2{
+        float:right;
+        max-width:50%;
+        padding-top:50px;
+    }
+
+    .contact-img{
+        border-radius:10px;
+        max-width:80%;
+        height:auto;
+        display: block;
+        margin: auto;
+    }
+
+    .contact-btn{
+        height:80px;
+        line-height:80px;
+        width:80px;
+        margin-top:10px;
+        float:right;
+        list-style-type:none;
+        text-align: center;
+    }
+
+    #about{
+
+    }
+    #cases{
+
+    }
+    #contact{
+
+    }
 </style>
 
-<div class="container gray-background">
-  <!-- ����� -->
-  <div class="box-BigTitle">
-    <h1 class="text-center">Dr. Norman Borlaug</h1>
-  </div>
-  
-  <!-- С���� -->
-  <div class="box-SmallTitle">
-    <h2 class="text-center"><i>The man who saved a billion lives</i></h2>
-  </div>
-  
-  <!-- ͼƬ -->
-  <div class="box-img">
-    <img src="https://images2.alphacoders.com/659/659621.jpg" class="img">
-    <!-- ͼƬ˵�� -->
-    <div class="box-ImgComment">
-      <h8 class="text-center"><i>Dr. Norman Borlaug, third from left, trains biologists in Mexico on how to increase wheat yields - part of his life-long war on hunger.</i></h8>
+<head>
+    <meta charset="UTF-8">
+    <title>个人作品集</title>
+    <!-- <link href="dist/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="dist/main.css" rel="stylesheet">
+</head>
+<body>
+    <!--标题-->
+    <div class="headline">
+        <div class="headline-box">
+            <div class="headline-box1"">
+                <p style="font-size:24px;margin:0px;">个人作品集</p>
+            </div>
+            <ul class="headline-btnlist">
+                <li class="headline-btn"><a href="#contact">联系我们</a></li>
+                <li class="headline-btn"><a href="#cases">成功案例</a></li>
+                <li class="headline-btn"><a href="#about">关于我们</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
-  
-  <!-- ʱ���߿�ʼ -->
-  <div class="box-TimeLineTitle">
-    <p style="font-size:20px;">Here's a time line of Dr. Borlaug's life:</p>
-  </div>
-  
-  <!-- ʱ���߷ֵ� -->
-  <div class="box-TimeLine">
-    <ul>
-      <li><span style="font-weight:bold">1914</span> - <i>Born in Cresco, Iowa</i></li>
-      <li><span style="font-weight:bold">1933</span> - <i>Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration"</i></li>
-      <li><span style="font-weight:bold">1935</span> - <i>Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."</i></li>
-    </ul>
-  </div>
-  
-  <!-- ������¼ -->
-  <div class="box-TimeLineTitle">
-    <p style="font-size:20px;">"Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."</p>
-  </div>
-  <div class="signature">
-    <p>�� <i>Indian Prime Minister Manmohan Singh</i></p>
-  </div>
 
-  <!-- ���� -->
-  <div class="readmore">
-    <p style="font-size:20px;">If you have time, you should read more about this incredible human being on his <a href="https://en.wikipedia.org/wiki/Norman_Borlaug">Wikipedia entry</a>.
-    </p>
-</div>
+
+    <!--简介-->
+    <div class="intro" id="about">
+        <div class="intro-box">
+            <div class="intro-box1">
+                <p class="intro-para">帕帕猴网络工作室，一个由WEB全栈工程师组成的工作室，有丰富的项目管理和项目开发经验。目前在CMS网站开发、WEB APP、IOS/Android APP、微信公众号和小程序均有成功案例。</p>
+                <p class="intro-para">项目管理层面:本工作室所有项目全部通过github/gitlab协作；项目技术层面:后端擅长Laravel和Symfony框架，前端擅长Vue, React, Angular。</p>
+                <p class="intro-para">本工作室致力于通过输出基于WEB技术的项目、现代的WEB开发技术、和培训WEB全栈工程师。</p>
+                <p></p>
+                 <ul class="intro-lablist">
+                    <li class="intro-lab">CMS网站</li>
+                    <li class="intro-lab">商城</li>
+                    <li class="intro-lab">WEB APP</li>
+                </ul>                
+            </div>
+
+            <div class="intro-box2">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="intro-img">
+                <h3 style="text-align:center;;">创办人-刘文灿</h3>
+            </div>
+        </div>
+    </div>
+
+    <!--成功案例-->
+    <div class="intro" id="cases">
+        <div class="temp-box">
+            <h2 style="text-align:center;font-size:20px;color:white;">
+                成功案例 
+            </h2>
+
+            <div class="temp">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="temp-img">
+                <h3 style="text-align:center;">创办人-刘文灿</h3>
+            </div>
+            <div class="temp">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="temp-img">
+                <h3 style="text-align:center;">创办人-刘文灿</h3>
+            </div>
+            <div class="temp">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="temp-img">
+                <h3 style="text-align:center;">创办人-刘文灿</h3>
+            </div>
+            <div class="temp">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="temp-img">
+                <h3 style="text-align:center;">创办人-刘文灿</h3>
+            </div>
+            <div class="temp">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="temp-img">
+                <h3 style="text-align:center;">创办人-刘文灿</h3>
+            </div>
+            <div class="temp">
+                <img src="http://papamk.com/imgs/avatar.jpg" class="temp-img">
+                <h3 style="text-align:center;">创办人-刘文灿</h3>
+            </div>
+        </div>
+    </div>
+
+    <!--联系我们-->
+    <div class="intro" id="contact">
+        <div class="contact-box">
+            <h2 style="text-align:center;font-size:20px;color:white;">
+                联系我们 
+            </h2>
+
+            <div style="max-width:80%;margin:auto;">
+            <div class="contact-box1">
+                <p class="intro-para">
+                    联系人:帕帕猴客服
+                </p>
+                <p class="intro-para">
+                    手机: 17605033425
+                </p>
+                <p class="intro-para">
+                    email: m17605033425@163.com
+                </p>
+            </div>
+
+            <div class="contact-box2">
+                <ul class="headline-btnlist">
+                    <li class="contact-btn">
+                        <img src="http://img4q.duitang.com/uploads/item/201504/09/20150409H0751_dHFYi.thumb.700_0.jpeg" class="contact-img">
+                    </li>
+                    <li class="contact-btn">
+                         <img src="http://img3.imgtn.bdimg.com/it/u=1675519482,2729468659&fm=26&gp=0.jpg" class="contact-img">
+                    </li>
+                    <li class="headline-btn">
+                    
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script type="text/javascript" src="dist/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="dist/bootstrap.min.js"></script> -->
+
+</body>
+</html>
