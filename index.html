@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="dist/bootstrap.min.css">
+<link rel="stylesheet" href="sass/bootstrap.min.css">
+<link rel="stylesheet" href="dist/bootstrap.min.js">
+<link rel="stylesheet" href="sass/bootstrap.min.js">
+<link href="https://fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
     #about {
         background-color: #ccc;
         padding-top: 100px;
-        max-width: 60%;
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
@@ -13,19 +16,17 @@
 
     #cases {
         background-color: #eee;
-        padding-top: 16px;
-        max-width: 60%;
         margin-left: auto;
         margin-right: auto;
+        padding: 0px 20px;
         overflow: hidden;
     }
 
     #contact {
         background-color: #ccc;
-        padding-top: 16px;
-        max-width: 60%;
         margin-left: auto;
         margin-right: auto;
+        padding: 0px 20px;
         overflow: hidden;
     }
 
@@ -35,7 +36,6 @@
         padding-top: 20px;
         color: white;
         padding-top: 16px;
-        max-width: 60%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -106,13 +106,13 @@
         text-decoration: none;
     }
     a:active{
-        color: white;
+        background-color: white;
     }
     a:hover{
-        color: white;
+        background-color: white;
     }
     a:visited{
-        color: black;
+        background-color: black;
         border: 1px;
         border-color: white;
         line-height: 20px;
@@ -128,6 +128,7 @@
         padding-top:20px;
         padding-bottom:20px;
         max-height:200px;
+        z-index: 1030;
     }
 
     .headline-box{
@@ -172,10 +173,13 @@
 
     .contact-img{
         border-radius:10px;
-        max-width:80%;
-        height:auto;
+        width:100px;
+        height:100px;
         display: block;
         margin: auto;
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .contact-btn {
@@ -198,7 +202,6 @@
         max-width:50%;
         padding-top:50px;
     }
-
 </style>
 
 <head>
@@ -224,20 +227,20 @@
     </div>
 
     <div class="row" id="about">
-        <div class="col-xs-12 col-sm-6 col-md-4" style="max-width: 30%; min-width: 200px; float: left;">
+        <div class="col-xs-12 col-sm-6 col-md-4">
             <img src="http://papamk.com/imgs/avatar.jpg" class="image">
             <p style="font-size: 20px; text-align: center;">
                 创办人-刘文灿
             </p>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-8" style="font-size: 24px">
-            <p>
+        <div class="col-xs-12 col-sm-6 col-md-8" style="padding-top: 40px;padding-bottom: 20px;">
+            <p class="intro-para">
                 帕帕猴网络工作室，一个由WEB全栈工程师组成的工作室，有丰富的项目管理和项目开发经验。目前在CMS网站开发、WEB APP、IOS/Android APP、微信公众号和小程序均有成功案例。
             </p>
-            <p>
+            <p class="intro-para">
                 项目管理层面:本工作室所有项目全部通过github/gitlab协作；项目技术层面:后端擅长Laravel和Symfony框架，前端擅长Vue, React, Angular。
             </p>
-            <p>
+            <p class="intro-para">
                 本工作室致力于通过输出基于WEB技术的项目、现代的WEB开发技术、和培训WEB全栈工程师。
             </p>
             <ul class="intro-lablist">
@@ -248,82 +251,81 @@
         </div>
     </div>
 
-    <div class="row" id="cases">
-        <p style="font-size: 30px;text-align: center;">成功案例</p>
-        <div class="row" style="text-align: center;">
-            <div class="col-xs-12 col-sm-6 col-md-4 temp-box-left">
-                <a href="http://www.bigbigads.com/app/">
-                    <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
-                    <p style="text-align: center;">Bigbigads(WEB APP)</p>
-                </a>
-            </div>
+    <div id="cases">
+        <h2 style="font-size: 30px;text-align: center;margin: 30px;">成功案例</h2>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 temp-box-left">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="http://www.bigbigads.com/app/">
                     <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
-                    <p style="text-align: center;">Bigbigads(WEB APP)</p>
+                    <p style="text-align: center;font-size: 20px;">Bigbigads(WEB APP)</p>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 temp-box-left">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="http://www.bigbigads.com/app/">
                     <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
-                    <p style="text-align: center;">Bigbigads(WEB APP)</p>
+                    <p style="text-align: center;font-size: 20px;">Bigbigads(WEB APP)</p>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 temp-box-left">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="http://www.bigbigads.com/app/">
                     <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
-                    <p style="text-align: center;">Bigbigads(WEB APP)</p>
+                    <p style="text-align: center;font-size: 20px;">Bigbigads(WEB APP)</p>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 temp-box-left">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="http://www.bigbigads.com/app/">
                     <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
-                    <p style="text-align: center;">Bigbigads(WEB APP)</p>
+                    <p style="text-align: center;font-size: 20px;">Bigbigads(WEB APP)</p>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 temp-box-left">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="http://www.bigbigads.com/app/">
                     <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
-                    <p style="text-align: center;">Bigbigads(WEB APP)</p>
+                    <p style="text-align: center;font-size: 20px;">Bigbigads(WEB APP)</p>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a href="http://www.bigbigads.com/app/">
+                    <img src="http://papamk.com/imgs/bba.jpg" class="temp-img">
+                    <p style="text-align: center;font-size: 20px;">Bigbigads(WEB APP)</p>
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="intro" id="contact">
-        <div class="contact-box">
-            <h2 style="text-align:center;font-size:30px;">
-                联系我们
-            </h2>
+    <div id="contact">
+        <h2 style="font-size: 30px;text-align: center;margin: 30px;">联系我们</h2>
 
-            <div style="max-width:80%;margin:auto;">
-                <div class="contact-box1">
-                    <p class="intro-para">
-                        联系人:帕帕猴客服
-                    </p>
-                    <p class="intro-para">
-                        手机: 17605033425
-                    </p>
-                    <p class="intro-para">
-                        email: m17605033425@163.com
-                    </p>
-                </div>
-
-                <div class="contact-box2">
-                    <ul class="headline-btnlist">
-                        <li class="contact-btn">
-                            <img src="http://img4q.duitang.com/uploads/item/201504/09/20150409H0751_dHFYi.thumb.700_0.jpeg" class="contact-img">
-                        </li>
-                        <li class="contact-btn">
-                            <img src="http://img3.imgtn.bdimg.com/it/u=1675519482,2729468659&fm=26&gp=0.jpg" class="contact-img">
-                        </li>
-                        <li class="headline-btn">
-
-                        </li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6" style="text-align: center;">
+                <p style="font-size: 20px;">
+                    联系人:帕帕猴客服
+                </p>
+                <p style="font-size: 20px;">
+                    手机: 17605033425
+                </p>
+                <p style="font-size: 20px;">
+                    email: m17605033425@163.com
+                </p>
             </div>
+
+            <div class="col-xs-12 col-sm-6" style="text-align: center;">
+                <ul style="list-style-type: none;">
+                    <li>
+                        <a href="http://www.qq.com">
+                            <img src="http://img4q.duitang.com/uploads/item/201504/09/20150409H0751_dHFYi.thumb.700_0.jpeg" class="contact-img">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://www.qq.com">
+                            <img src="http://img3.imgtn.bdimg.com/it/u=1675519482,2729468659&fm=26&gp=0.jpg" class="contact-img">
+                        </a>
+                    </li>
+                </ul>
+            </div>>
+
         </div>
     </div>
 
